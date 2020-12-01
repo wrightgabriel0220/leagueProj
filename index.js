@@ -20,7 +20,7 @@ app.get('/champions/:champion', async (req, res) => {
     let { champion } = req.params;
     champion = champion.charAt(0).toUpperCase() + champion.slice(1);
     try {
-        const reqDDragon = await axios("http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion.json?api-key=RGAPI-52196e30-a662-4dfd-9ad8-e53dc023a0fc");
+        const reqDDragon = await axios(`http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion.json?api-key=${process.argv}`);
 
         const { name, title, blurb, tags, image, stats} = reqDDragon.data.data[champion];
 

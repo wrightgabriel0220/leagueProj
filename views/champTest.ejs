@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Champion Data Test</title>
+    <link href="/public/assets/styles.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="champion-block">
+      <h1 class="name"><%= name %></h1>
+      <h2 class="title"><%= title %></h2>
+      <div class="internal-info">
+        <img src=<%=
+        `http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/${champImg}`%>
+        class="icon"><span><p class="blurb"><%= blurb %></p></span>
+      </div>
+
+      <div>
+        <button id="levelup">Level+</button>
+        <button id="leveldown">Level-</button>
+        <button id="levelreset">Reset</button>
+      </div>
+      
+      <div class="stat-block">
+      <ul><% for (let key of Object.keys(stats)) { %></p>
+        <li><%= `${key}: ${stats[key]}`%></li>
+        <% } %>
+      </ul>
+     </div>
+    </div>
+    <script src="/public/assets/champTest.js"></script> 
+  </body>
+</html>

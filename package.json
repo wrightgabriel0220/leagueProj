@@ -1,0 +1,17 @@
+{
+  "name": "leagueproj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabe",
+  "license": "ISC",
+  "dependencies": {
+    "@fightmegg/riot-api": "0.0.6",
+    "axios": "^0.21.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}

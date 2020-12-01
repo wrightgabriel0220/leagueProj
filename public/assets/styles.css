@@ -1,0 +1,43 @@
+body { 
+    font-family: "Domine", sans-serif;
+}
+
+.name {
+    font-weight: 1000;
+    font-size: 3rem;
+    margin: 0;
+    width: 100%;
+}
+
+.title {
+    font-weight: 200;
+    font-size: 1.5rem;
+    margin: 0;
+    width: 100%;
+}
+
+.icon {
+    margin: 15px;
+}
+
+.champion-block {
+    background: hsl(217, 56%, 10%);
+    color: white;
+    padding: 25px 10px 10px 15px;
+    width: auto;
+    height: auto;
+    margin: 10px 0px;
+    border: 5px solid black;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.internal-info {
+    display: flex;
+}
+
+.blurb {
+    font-style: italic;
+    line-height: 1.5em;
+}

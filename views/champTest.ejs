@@ -10,7 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
+
   <body>
     <div class="champion-block">
       <h1 class="name"><%= name %></h1>
@@ -25,15 +27,20 @@
         <button id="levelup">Level+</button>
         <button id="leveldown">Level-</button>
         <button id="levelreset">Reset</button>
+        <h3>Level: <span id="level">1</span></h3>
       </div>
-      
+
       <div class="stat-block">
-      <ul><% for (let key of Object.keys(stats)) { %></p>
-        <li><%= `${key}: ${stats[key]}`%></li>
-        <% } %>
-      </ul>
-     </div>
+        <% %>
+        <ul>
+          <% for (let key of Object.keys(mainStats)) { %>
+          <li>
+            <%=`${key}:`%><span id="<%=key%>"><%=`${mainStats[key][0]}`%></span>
+          </li>
+          <% } %>
+        </ul>
+      </div>
     </div>
-    <script src="/public/assets/champTest.js"></script> 
+    <script src="/public/assets/champTest.js"></script>
   </body>
 </html>
